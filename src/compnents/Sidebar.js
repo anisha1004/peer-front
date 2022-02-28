@@ -1,5 +1,6 @@
 import React from "react";
 import "../css/Sidebar.css";
+import { Link } from "react-router-dom";
 import {
 	Dashboard,
 	CreditCard,
@@ -15,39 +16,46 @@ const Sidebar = () => {
 			<div className='side'>
 				<div className='logo'>Logo</div>
 				<ul className='side-menu'>
-					<li className='side-option'>
-						<div className='side-icon'>
-							<div className='side-icon-shadow'>
-								<AssignmentInd />
+					<Link to='/' className='sidelink'>
+						<li className='side-option'>
+							<div className='side-icon'>
+								<div className='side-icon-shadow'>
+									<AssignmentInd />
+								</div>
 							</div>
-						</div>
-						<div className='side-text'>Home</div>
-					</li>
-
-					<li className='side-option'>
-						<div className='side-icon'>
-							<div className='side-icon-shadow'>
-								<Dashboard />
+							<div className='side-text'>Home</div>
+						</li>
+					</Link>
+					<Link to='/dashboard' className='sidelink'>
+						<li className='side-option'>
+							<div className='side-icon'>
+								<div className='side-icon-shadow'>
+									<Dashboard />
+								</div>
 							</div>
-						</div>
-						<div className='side-text'>Dashboard</div>
-					</li>
-					<li className='side-option'>
-						<div className='side-icon'>
-							<div className='side-icon-shadow'>
-								<RocketLaunch />
+							<div className='side-text'>Dashboard</div>
+						</li>
+					</Link>
+					<Link to='/tracking' className='sidelink'>
+						<li className='side-option'>
+							<div className='side-icon'>
+								<div className='side-icon-shadow'>
+									<RocketLaunch />
+								</div>
 							</div>
-						</div>
-						<div className='side-text'>Tracking</div>
-					</li>
-					<li className='side-option'>
-						<div className='side-icon'>
-							<div className='side-icon-shadow'>
-								<Login />
+							<div className='side-text'>Tracking</div>
+						</li>
+					</Link>
+					<Link to='/login' className='sidelink'>
+						<li className='side-option'>
+							<div className='side-icon'>
+								<div className='side-icon-shadow'>
+									<Login />
+								</div>
 							</div>
-						</div>
-						<div className='side-text'>Sign Up</div>
-					</li>
+							<div className='side-text'>Sign Up</div>
+						</li>
+					</Link>
 				</ul>
 			</div>
 		</div>
